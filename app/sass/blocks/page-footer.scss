@@ -1,0 +1,125 @@
+.page-footer {
+	position: relative;
+	height: 376px;
+	min-width: 320px;
+	margin-top: -376px;
+	padding-top: 50px;
+	background-color: $main-yellow;
+}
+.page-footer__list {
+	margin: 0 0 40px;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+}
+.page-footer__item {
+	padding-top: 20px;
+	margin-bottom: 20px;
+	border-top: 1px solid #000;
+}
+.page-footer__content-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+	text-align: justify;
+	&:after {
+		display: inline-block;
+		width: 100%;
+		height: 0;
+		content: "";
+	}
+}
+.page-footer__content-item {
+	display: inline-block;
+}
+.page-footer__content-link {
+	display: block;
+	font-family: $agora-regular;
+	font-size: 18px;
+	color: #000;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.page-footer__socials-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+	text-align: center;
+}
+.page-footer__socials-item {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-left: 20px;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+.page-footer__socials-link {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	border-radius: 3px;
+	text-align: center;
+	&:hover:after {
+		color: $main-red;
+	}
+	&:after {
+		display: inline-block;
+		line-height: 24px;
+		font-family: $font-awesome;
+		font-size: 18px;
+		transition: color .2s linear;
+		color: $main-yellow;
+		vertical-align: top;
+	}
+	&--fb:after {
+		content: "\f09a";
+	}
+	&--vk:after {
+		content: "\f189";
+	}
+	&--in:after {
+		content: "\f16d";
+	}
+}
+.page-footer__copyright {
+	position: absolute;
+	width: 100%;
+	bottom: 20px;
+	font-family: $agora-regular;
+	font-size: 14px;
+	color: #000;
+	text-align: center;
+}
+
+// ----- Media queries -----
+
+@media (min-width: $screen-xs) {
+	.page-footer__list {
+		text-align: justify;
+		&:after {
+			display: inline-block;
+			width: 100%;
+			height: 0;
+			content: "";
+		}
+	}
+	.page-footer__item {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.page-footer__content-item {
+		display: block;
+	}
+}
+@media (min-width: 700px) {
+	.page-footer__list {
+		padding: 0 40px;
+	}
+}

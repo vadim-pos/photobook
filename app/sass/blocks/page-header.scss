@@ -1,0 +1,125 @@
+.page-header {
+	position: relative;
+	padding-top: 30px;
+	background-color: #fff;
+}
+.page-header-panel {
+	position: relative;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.page-header__menu-trigger {
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 22px;
+	left: 0; top: -2px;
+	line-height: 22px;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: top;
+	&:hover:after {
+		color: $main-red;
+	}
+	&:after {
+		font-family: $font-awesome;
+		content: "\f0c9";
+		font-size: 24px;
+		color: #000;
+		transition: .15s linear;
+	}
+	&--active {
+		&:after {
+			content: "\f00d";
+		}
+	}
+}
+.page-header__logo {
+	display: inline-block;
+	text-decoration: none;
+}
+a.page-header__log-in {
+	position: absolute;
+	display: inline-block;
+	width: 33px;
+	height: 29px;
+	top: -6px; right: 0;
+}
+.page-header__log-in-icon {
+	width: 33px;
+	height: 29px;
+	&:hover {
+		.page-header__log-in-arrow {
+			fill: $main-yellow;
+		}
+		.page-header__log-in-door {
+			fill: $main-red;
+		}
+	}
+}
+.page-header__log-in-arrow {
+	transition: .15s linear;
+}
+.page-header__log-in-door {
+	transition: .15s linear;
+}
+.page-header__menu {
+	position: absolute;
+	z-index: 10;
+	display: none;
+	width: 100%;
+	top: 100%;
+	left: 0;
+}
+.page-header__menu-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: #fff;
+}
+.page-header__menu-item {
+	padding: 1px 0;
+	border-bottom: 1px solid #000;
+	&:first-child {
+		border-top: 1px solid #000;
+	}
+}
+.page-header__menu-link {
+	position: relative;
+	z-index: 2;
+	display: block;
+	padding-left: 10px;
+	border-left: 5px solid $main-yellow;
+	font-family: $agora-regular;
+	font-size: 16px;
+	color: #000;
+	text-transform: uppercase;
+	text-decoration: none;
+	&:hover:after {
+		width: 100%;
+	}
+	&:after {
+		position: absolute;
+		z-index: -1;
+		height: 100%;
+		width: 0;
+		top: 0; left: 0;
+		background-color: $main-yellow;
+		content: "";
+		transition: width .5s ease;
+	}
+}
+
+// ----- Media queries -----
+
+@media (min-width: $screen-xs) {
+	.page-header__menu-item {
+		text-align: center;
+	}
+	.page-header__menu-link {
+		font-size: 24px;
+		&:after {
+			transition: width .8s ease;
+		}
+	}
+}
