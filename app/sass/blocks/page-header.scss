@@ -92,6 +92,7 @@ a.page-header__log-in {
 	border-left: 5px solid $main-yellow;
 	font-family: $agora-regular;
 	font-size: 16px;
+	line-height: 28px;
 	color: #000;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -106,7 +107,7 @@ a.page-header__log-in {
 		top: 0; left: 0;
 		background-color: $main-yellow;
 		content: "";
-		transition: width .5s ease;
+		transition: width .2s linear;
 	}
 }
 
@@ -119,7 +120,7 @@ a.page-header__log-in {
 	.page-header__menu-link {
 		font-size: 24px;
 		&:after {
-			transition: width .8s ease;
+			transition: width .4s ease;
 		}
 	}
 }

@@ -120,6 +120,7 @@
 
 @media (min-width:  $screen-md) {
 	.solutions__list {
+		text-justify: distribute;
 		text-align: justify;
 		&:after {
 			display: inline-block;

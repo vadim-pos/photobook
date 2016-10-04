@@ -22,6 +22,7 @@
 	padding: 0;
 	list-style: none;
 	font-size: 0;
+	text-justify: distribute;
 	text-align: justify;
 	&:after {
 		display: inline-block;
@@ -102,6 +103,7 @@
 
 @media (min-width: $screen-xs) {
 	.page-footer__list {
+		text-justify: distribute;
 		text-align: justify;
 		&:after {
 			display: inline-block;
